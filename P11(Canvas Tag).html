@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>This is CANVAS TAG</h1>
+        <P>The Html canvas tag provides html a bitmaps surface to work with . it is used to draw a grphics in html websites and is used to draw grphics using scripting language like javascript</P>
+    </center>
+
+    <canvas id="canvas" width="600" height="1000" style="border:3px solid black"></canvas>
+
+    <script>
+        let mycanvas = document.getElementById('canvas').getContext('2d')
+        mycanvas.fillStyle ="red";
+        mycanvas.fillRect(100, 40, 200, 150) //fillRect(x-axis, y-axis, width, height)
+    </script>
+
+    <br>
+
+<canvas id="canvas1" width="600" height="1000" style="border:3px solid black"></canvas>
+
+<script>
+    let mycanvas1 = document.getElementById('canvas1').getContext('2d')
+    mycanvas1.fillStyle ="red";
+    mycanvas1.strokeRect(100, 40, 200, 150) //fillRect(x-axis, y-axis, width, height)
+    
+</script>
+
+<center><h1>Creating circle using CANVAS</h1></center>
+
+<canvas id="canvas2" width="600" height="1000" style="border:3px solid black"></canvas>
+
+    <script>
+        let mycanvas2 = document.getElementById('canvas2').getContext('2d')
+        mycanvas2.fillStyle ="yellow";
+        // mycanvas2.arc(100, 200, 50, 0, 2*Math.PI) //arc(x-axis, y-axis, radius of the circle, starting points, arc values)
+        // mycanvas2.arc(100, 200, 50, 0, 2*3.14)
+        mycanvas2.arc(100, 200, 50, 0, 6.28)
+        mycanvas2.fill()
+        mycanvas2.strokearc(100, 300, 20, 0, 6.28)
+
+        
+        
+    </script>
+
+    <center>
+        <h1>Creating rounded using canvas</h1>
+    </center>
+    <canvas id="canvas3" width="600" height="1000" style="border:3px solid black"></canvas>
+
+    <script>
+
+        let mycanvas3 = document.getElementById('canvas3').getContext('2d')
+        mycanvas3.beginPath()
+        mycanvas3.fillStyle = "green"
+        // mycanvas3.roundRect( 100, 200, 200, 100, [10])
+        mycanvas3.roundRect(100, 200, 150, 100,[100, 0, 50, 20])//[Top left, top Right, bottom right, bottom left]
+        mycanvas3.fill();
+        mycanvas3.closePath()
+
+        mycanvas3.beginPath()
+        mycanvas3.fillStyle = "red"
+        // mycanvas3.roundRect( 100, 200, 200, 100, [10])
+        mycanvas3.roundRect(300, 400, 150, 100,[100, 0, 50, 20])//[Top right, top left, bottom left, bottom right]
+        mycanvas3.fill();
+        mycanvas3.closePath()
+
+        mycanvas3.beginPath()
+        mycanvas3.fillStyle = "blue"
+        // mycanvas3.roundRect( 100, 200, 200, 100, [10])
+        mycanvas3.roundRect(20, 20, 150, 100,[20, 5])//[Top right, top left, bottom left, bottom right]
+        mycanvas3.fill();
+        mycanvas3.closePath()
+
+
+
+    </script>
+</body>
+</html>

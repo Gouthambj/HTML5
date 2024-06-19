@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <canvas id="canvas1" width="500" height="500" style="border:3px solid #000"></canvas>
+
+    <script>
+        let canvas1 = document.getElementById('canvas1').getContext('2d')
+        canvas1.beginPath()
+        // canvas1.setLineDash([5, 10]) // (width of the dash, space between dash)
+        // canvas1.moveTo(0, 100) //moveTo(x, y)
+        // canvas1.lineTo(300, 200)
+        // canvas1.lineTo(300, 400)
+        // canvas1.lineTo(0, 400)
+        // canvas1.lineTo(100, 400)
+        // canvas1.lineTo(100, 300)
+        // canvas1.lineTo(150, 300)
+        // canvas1.lineTo(150, 400)
+        // canvas1.lineTo(300, 400)
+        // canvas1.lineTo(500, 350)
+
+
+        // canvas1.moveTo(300, 200)
+        // canvas1.lineTo(500, 160)
+
+        // canvas1.moveTo(0, 100)
+        // canvas1.lineTo(500,50)
+        // canvas1.strokeStyle = "red"
+        // // canvas1.setLineDash([5, 10])
+        // canvas1.moveTo(0, 400)
+        // canvas1.lineTo(400, 400)
+        // canvas1.lineTo(100, 200)
+        // canvas1.lineTo(300, 400)
+        // canvas1.moveTo(100, 200)
+        // canvas1.lineTo(200, 400)
+
+        // canvas1.moveTo(100, 200)
+        // canvas1.lineTo(100, 400)
+
+        // canvas1.moveTo(100, 200)
+        // canvas1.lineTo(0, 400)
+
+        // canvas1.moveTo(100, 200)
+        // canvas1.lineTo(0, 300)
+
+        canvas1.setLineDash([5, 10])
+        canvas1.strokeStyle = "green"
+        canvas1.moveTo(10, 400)
+        canvas1.lineTo(350, 400)
+        canvas1.lineTo(430, 370)
+        canvas1.lineTo(100, 370)
+        canvas1.lineTo(10, 400)
+        canvas1.lineTo(10, 200)
+        canvas1.lineTo(350, 200)
+        canvas1.lineTo(350, 400)
+
+        canvas1.moveTo(350, 200)
+        canvas1.lineTo(430, 150)
+        canvas1.lineTo(100, 150)
+        canvas1.lineTo(10, 200)
+
+        canvas1.moveTo(100, 150)
+        canvas1.lineTo(100, 370)
+
+        canvas1.moveTo(430, 150)
+        canvas1.lineTo(430, 370)
+
+
+
+
+
+
+
+        
+
+
+        canvas1.stroke()
+    </script>
+</body>
+</html>

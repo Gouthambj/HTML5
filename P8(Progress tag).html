@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>PROGRESS TAG</h1>
+    </center>
+    <hr>
+    <h1>DEFAULT PROGRESS BAR</h1>
+    <progress></progress>
+
+
+    <h1>Static Progress bar</h1>
+    <progress min="0" max="100" value="50"></progress>
+
+
+    <h1>Dynamic Progress bar</h1>
+    <progress min="0" max="100" value="16" id="testProgress"></progress>
+    <span id="result"></span>
+
+
+    <script>
+        let presentDownload  = 0; //1, 2, 3
+        function setDownload(){
+           if(presentDownload<100){
+            presentDownload = presentDownload +1 //0+1 = 1, 1+1 = 2, 2+1 = 3
+            document.getElementById('testProgress').value = presentDownload
+            document.getElementById('result').innerText = presentDownload + "% downloading..."
+            document.getElementById('result').style.color = "brown"
+            document.getElementById('result').style.backgroundColor = "gold"
+            document.getElementById('result').style.padding = "10px"
+           }
+           else{
+            document.getElementById('result').innerText = "file has been downloaded"
+            document.getElementById('result').style.color = "white"
+            document.getElementById('result').style.backgroundColor = "green"
+            document.getElementById('result').style.padding = "10px"
+            document.getElementById('result').style.borderRadius = "20px" 
+           }
+        }
+       setInterval(' setDownload()', 100)
+    </script>
+</body>
+</html>

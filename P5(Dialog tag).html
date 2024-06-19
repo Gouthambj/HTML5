@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        dialog{
+            width: 300px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .close{
+            float: right;
+            font-size: 18px;
+            border: none;
+            
+        }
+        input{
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 8px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .mainBtn{
+            background-color: #f50d0d;
+            width: 100%;
+            border: none;
+            padding: 10px;
+            color: #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Dialog tag..!</h1>
+        <p>this tag is used to create popup dialog on a webpage</p>
+    </center>
+    <hr>
+    <hr>
+
+
+    <dialog id="myDialog">
+        <button class="close" onclick="closeDialog()">&times;</button>
+        <h1>Create Account</h1>
+            <form>
+                <label for="">username</label>
+                <input type="text" name="username" placeholder="enter your name">
+
+                <label for="">Email Address</label>
+                <input type="email" name="email" placeholder="enter your email">
+
+                <label for="">Password</label>
+                <input type="password" name="password" placeholder="create Passowrd">
+
+                <label for="">Confirm Password</label>
+                <input type="password" name="c_password" placeholder="confirm Passowrd">
+                <button class="mainBtn">Create Account</button>
+            </form>
+    </dialog>
+
+    <button onclick="showDialog()">Show Dialog</button>
+
+
+    <script>
+        function showDialog(){
+            document.getElementById('myDialog').show()
+        }
+        
+
+        function closeDialog(){
+            document.getElementById('myDialog').close();
+        }
+        
+    </script>
+
+    
+</body>
+</html>

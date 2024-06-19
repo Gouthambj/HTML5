@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>METER Tag</h1>
+        <p>The meter Tag is Used to indicate the value</p>
+    </center>
+
+    <hr>
+
+    <h1>Default Meter Tag</h1>
+    <meter></meter>
+
+    <h1>Static Meter Tag</h1>
+    <meter min="0" max="100" value="81" low="20" high="80"> </meter>
+    
+    <h1>Dynamic meter tag</h1>
+    <fieldset>
+        <legend>This is the Dynamic meter tag</legend>
+        <meter min="0" max="100" value="81" low="20" high="80" id="testMeter" ></meter>
+        <p id="result"></p>
+    </fieldset>
+
+    <script>
+        let charge = 0;
+        function increaseCharge(){
+            if(charge<100){
+                charge ++;
+                document.getElementById('testMeter').value = charge;
+                document.getElementById('result').innerText= charge;
+            }
+            else{
+                alert('Battery is Full');
+                document.getElementById('result').innerText='Remove the Plug in Charger'
+            }
+        }
+        setInterval('increaseCharge()', 100)
+    </script>
+
+
+</body>
+</html>
